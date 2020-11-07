@@ -54,15 +54,9 @@ async function parse(data) {
 	return locations;
 }
 
-async function downloadAndParse() {
+export async function downloadAndParse() {
 	const data = await download();
 	const locations = await parse(data);
 
 	return locations;
 }
-
-module.exports = {
-	download,
-	parse,
-	downloadAndParse,
-};
